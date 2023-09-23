@@ -1,12 +1,26 @@
-values = [
-    {'y': 30, 'x': 35},
-    {'y': 40, 'x': 25},
-    {'y': 35, 'x': 10},
-    {'y': 17, 'x': 18},
-]
+print('Wieviele Punkte werden gebraucht?')
+points = int(input())
+
+if points < 3:
+    print('Bitte drei Punkte eingeben!')
+    quit()
+
+values = []
+
+for i in range(1, points + 1):
+    print(f'{i}. Punkt')
+    print('Y-Wert:')
+    y = float(input())
+    print('X-Wert:')
+    x = float(input())
+
+    values.append({'y': y, 'x': x})
 
 values.append(values[0].copy())
 values.append(values[1].copy())
+
+sum_y = 0
+sum_x = 0
 
 for i in range(1, len(values) - 1):
     before = values[i-1]
@@ -24,6 +38,12 @@ for i in range(1, len(values) - 1):
     values[i]['sub_x'] = sub_x
     values[i]['product_y'] = product_y
 
-for value in values:
-    print(value)
+    sum_y += product_y
+    sum_x += product_x
 
+if round(sum_y, 3) != round(sum_x, 3):
+    print('Irgendwas ist schiefgelaufen...')
+    quit()
+
+half_sum_y = sum_y / 2.0
+print(half_sum_y)
