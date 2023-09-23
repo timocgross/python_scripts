@@ -9,7 +9,6 @@ values.append(values[0].copy())
 values.append(values[1].copy())
 
 for i in range(1, len(values) - 1):
-    print(i)
     before = values[i-1]
     current = values[i]
     after = values[i+1]
