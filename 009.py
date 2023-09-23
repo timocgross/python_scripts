@@ -13,6 +13,7 @@ for i in range(1, len(values) - 1):
     current = values[i]
     after = values[i+1]
 
+    # calculating
     sub_y = after['y'] - before['y']
     product_x = current['x'] * (after['y'] - before['y'])
     sub_x = before['x'] - after['x']
