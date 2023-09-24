@@ -46,4 +46,4 @@ if round(sum_y, 3) != round(sum_x, 3):
     quit()
 
 half_sum_y = sum_y / 2.0
-print(half_sum_y)
+print(f'Die Fläche beträgt {half_sum_y}.')
