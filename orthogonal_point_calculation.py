@@ -101,9 +101,9 @@ for i in range(1, len(values) - 1):
     current['Δh'] = Δh
 
 for point in values:
-    Δs = point['Δs']
-    Δh = point['Δh']
-    print(f'Δs: {Δs}, Δh: {Δh}')
+    Δs = values[i][vertical] - values[i-1][horizontal]
+    Δh = values[i][vertical] - values[i-1][horizontal]
+    print(f'Δs von {i}: {Δs}, Δh von {i}: {Δh}')
 
 if sum_Δs == Sgem:
     print(f'ΣΔs stimmt überein. ΣΔs = {sum_Δs}.')

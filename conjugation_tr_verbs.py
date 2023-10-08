@@ -1,57 +1,59 @@
 # 'ç ğ ı ş' belki gerekileceğin harflerdir.
 
 print('Insert the verb you want to conjugate.')
-word = input()
-new_word = word[:-3]
-final_word = new_word[:-1]
+# word = input()
+word = "bulmak"
+stem = word[:-3]
+final_word = stem[:-1]
 
 # Present conjugation
 print('Which person (f.e. 1. Sg.)?')
-user_person = input()
+# user_person = input()
+user_person = "1. Sg."
 
-if 'a' or 'ı' in final_word[-3:-1]:
+if 'a' in stem or 'ı' in stem:
     if user_person == '1. Sg.':
-        present_i_pers_sg = final_word + 'ıyorum'
+        present_i_pers_sg = stem + 'ıyorum'
         print(present_i_pers_sg)
     elif user_person == '2. Sg.':
-        present_ii_pers_sg = final_word + 'ıyorsun'
+        present_ii_pers_sg = stem + 'ıyorsun'
         print(present_ii_pers_sg)
     elif user_person == '3. Sg.':
-        present_iii_pers_sg = final_word + 'ıyor'
+        present_iii_pers_sg = stem + 'ıyor'
         print(present_iii_pers_sg)
     elif user_person == '1. Pl.':
-        present_i_pers_pl = final_word + 'ıyoruz'
+        present_i_pers_pl = stem + 'ıyoruz'
         print(present_i_pers_pl)
     elif user_person == '2. Pl.':
-        present_ii_pers_pl = final_word + 'ıyorsunuz'
+        present_ii_pers_pl = stem + 'ıyorsunuz'
         print(present_ii_pers_pl)
     elif user_person == '3. Pl.':
-        present_iii_pers_pl = final_word + 'ıyorlar'
+        present_iii_pers_pl = stem + 'ıyorlar'
         print(present_iii_pers_pl)
     else:
         exit()
-elif 'e' or 'i' in final_word[-3:-1]:
+elif 'e' in stem or 'i' in stem:
     if user_person == '1. Sg.':
-        present_i_pers_sg = final_word + 'iyorum'
+        present_i_pers_sg = stem + 'iyorum'
         print(present_i_pers_sg)
     elif user_person == '2. Sg.':
-        present_ii_pers_sg = final_word + 'iyorsun'
+        present_ii_pers_sg = stem + 'iyorsun'
         print(present_ii_pers_sg)
     elif user_person == '3. Sg.':
-        present_iii_pers_sg = final_word + 'iyor'
+        present_iii_pers_sg = stem + 'iyor'
         print(present_iii_pers_sg)
     elif user_person == '1. Pl.':
-        present_i_pers_pl = final_word + 'iyoruz'
+        present_i_pers_pl = stem + 'iyoruz'
         print(present_i_pers_pl)
     elif user_person == '2. Pl.':
-        present_ii_pers_pl = final_word + 'iyorsunuz'
+        present_ii_pers_pl = stem + 'iyorsunuz'
         print(present_ii_pers_pl)
     elif user_person == '3. Pl.':
-        present_iii_pers_pl = final_word + 'iyorlar'
+        present_iii_pers_pl = stem + 'iyorlar'
         print(present_iii_pers_pl)
     else:
         exit()
-elif 'o' or 'u' in final_word[-3:-1]:
+elif 'o' in stem or 'u' in stem:
     if user_person == '1. Sg.':
         present_i_pers_sg = final_word + 'uyorum'
         print(present_i_pers_sg)
@@ -72,24 +74,24 @@ elif 'o' or 'u' in final_word[-3:-1]:
         print(present_iii_pers_pl)
     else:
         exit()
-elif 'ö' or 'ü' in new_word[-3:-1]:
+elif 'ö'in stem[-3:-1] or 'ü' in stem[-3:-1]:
     if user_person == '1. Sg.':
-        present_i_pers_sg = new_word + 'üyorum'
+        present_i_pers_sg = stem + 'üyorum'
         print(present_i_pers_sg)
     elif user_person == '2. Sg.':
-        present_ii_pers_sg = new_word + 'üyorsun'
+        present_ii_pers_sg = stem + 'üyorsun'
         print(present_ii_pers_sg)
     elif user_person == '3. Sg.':
-        present_iii_pers_sg = new_word + 'üyor'
+        present_iii_pers_sg = stem + 'üyor'
         print(present_iii_pers_sg)
     elif user_person == '1. Pl.':
-        present_i_pers_pl = new_word + 'üyoruz'
+        present_i_pers_pl = stem + 'üyoruz'
         print(present_i_pers_pl)
     elif user_person == '2. Pl.':
-        present_ii_pers_pl = new_word + 'üyorsunuz'
+        present_ii_pers_pl = stem + 'üyorsunuz'
         print(present_ii_pers_pl)
     elif user_person == '3. Pl.':
-        present_iii_pers_pl = new_word + 'üyorlar'
+        present_iii_pers_pl = stem + 'üyorlar'
         print(present_iii_pers_pl)
     else:
         exit()
