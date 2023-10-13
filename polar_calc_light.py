@@ -10,6 +10,8 @@
 #pos_y = input(f'Y-Koordinate für den Punkt {pos_name}: ')
 #pos_x = input(f'X-Koordinate für den Punkt {pos_name}: ')
 
+import matplotlib.pyplot as plt
+import numpy as np
 import math
 
 ref_name = 10
@@ -31,7 +33,7 @@ def first_t():
 
 def check_t_pos_ref(t_pos_ref):
     if 0 <= t_pos_ref < 100:
-        print('Der Winkel geht in den I. Quadranten, also word nichts addiert.')
+        print('Der Winkel geht in den I. Quadranten, also wird nichts addiert.')
         return t_pos_ref
     elif 100 <= t_pos_ref < 200:
         print('Der Winkel geht in den II. Quadranten, also werden 200 gon addiert.')
@@ -84,13 +86,12 @@ def distance_control():
     calc_distance = round(math.sqrt((difference_y)**2 + (difference_x)**2), 3)
 
 distance_control()
-
-print(f'Die gerechnete Strecke beträgt {calc_distance}.')
+print(f'Die gerechnete Strecke beträgt {calc_distance} m.')
 
 if calc_distance == dist_pos_point:
-    print(True)
+    print('Kontrolliert: True')
 else:
-    print(False)
+    print('Kontrolliert: False')
 
 def final_coords():
     global y_coord, x_coord
@@ -99,5 +100,19 @@ def final_coords():
     return y_coord, x_coord
 
 final_coords()
-
 print(f'Der Punkt {point_name} hat die Koordinaten ({y_coord} | {x_coord}).')
+
+# Anzeige
+plt.plot([pos_y, ref_y], [pos_x, ref_x], color = 'k', linestyle = '-', zorder = -1)
+plt.plot([pos_y, y_coord], [pos_x, x_coord], color = 'r', linestyle = '-', zorder = -1)
+
+plt.scatter([pos_y], [pos_x], color = 'k', marker = '^')
+plt.text(pos_y - 3, pos_x, f'{pos_name}', fontsize = 12, ha = 'right', va = 'center')
+
+plt.scatter([ref_y], [ref_x], color = 'k', marker = '^')
+plt.text(ref_y + 3, ref_x, f'{ref_name}', fontsize = 12, ha = 'left', va = 'center')
+
+plt.scatter([y_coord], [x_coord], color = 'r', marker = 'o')
+plt.text(y_coord + 3, x_coord, f'{point_name}', color = 'r', fontsize = 12, ha = 'left', va = 'center')
+
+plt.show()
