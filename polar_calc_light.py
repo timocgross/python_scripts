@@ -1,10 +1,9 @@
 #ref_name = input('Name des Referenzpunktes: ')
 #pos_name = input('Name des Standpunktes: ')
+#point_count = input('Anzahl der gesuchten Punkte: ')
 #point_name = input('Name des gesuchten Punktes: ')
 #dist_pos_point = float(input('Streckenlänge vom Standpunkt zum gesuchten Punkt: '))
 #angle_pos_point = float(input('Gib den Winkel vom Standpunkt zum Punkt an: '))
-
-# Eingabe der Koordinaten
 #ref_y = input(f'Y-Koordinate für den Punkt {ref_name}: ')
 #ref_x = input(f'X-Koordinate für den Punkt {ref_name}: ')
 #pos_y = input(f'Y-Koordinate für den Punkt {pos_name}: ')
@@ -31,6 +30,7 @@ def first_t():
     pre_calc = math.atan((points[0][0] - points[1][0]) / (points[0][1] - points[1][1]))
     t_pos_ref = round(((pre_calc * 200) / math.pi), 4)
 
+# Nochmal rüberschauen? (zu viel gon?)
 def check_t_pos_ref(t_pos_ref):
     if 0 <= t_pos_ref < 100:
         print('Der Winkel geht in den I. Quadranten, also wird nichts addiert.')
