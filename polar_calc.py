@@ -45,6 +45,41 @@ ref_x = 12812.74
 pos_y = 16534.98
 pos_x = 12653.77
 
+# Aufgabe 4:
+ref_name = 100
+pos_name = 200
+point1_name = '11'
+point2_name = '12'
+point3_name = '13'
+dist_pos_point1 = 89.044
+dist_pos_point2 = 68.002
+dist_pos_point3 = 90.104
+angle_pos_point1 = 69.1123
+angle_pos_point2 = 210.1005
+angle_pos_point3 = 325.0876
+ref_y = 24865.45
+ref_x = 21776.92
+pos_y = 25002.95
+pos_x = 21690.90
+
+pos_name = input('Name des Standpunktes: ')
+pos_y = float(input(f'Y-Koordinate für den Punkt {pos_name}: '))
+pos_x = float(input(f'X-Koordinate für den Punkt {pos_name}: '))
+ref_name = input('Name des Referenzpunktes: ')
+ref_y = float(input(f'Y-Koordinate für den Punkt {ref_name}: '))
+ref_x = float(input(f'X-Koordinate für den Punkt {ref_name}: '))
+point1_name = input('Name des 1. Punktes: ')
+dist_pos_point1 = float(input('Streckenlänge vom Standpunkt zum 1. Punkt: '))
+angle_pos_point1 = float(input('Gib den Winkel vom Standpunkt zum 1. Punkt an: '))
+point2_name = input('Name des 2. Punktes: ')
+dist_pos_point2 = float(input('Streckenlänge vom Standpunkt zum 2. Punkt: '))
+pre_angle2 = float(input('Gib den Winkel vom Standpunkt zum 2. Punkt an: '))
+angle_pos_point2 = angle_pos_point1 + pre_angle2
+point3_name = input('Name des 3. Punktes: ')
+dist_pos_point3 = float(input('Streckenlänge vom Standpunkt zum 3. Punkt: '))
+pre_angle3 = float(input('Gib den Winkel vom Standpunkt zum 3. Punkt an: '))
+angle_pos_point3 = angle_pos_point2 + pre_angle3
+
 # Template (ein Punkt):
 pos_name = input('Name des Standpunktes: ')
 ref_name = input('Name des Referenzpunktes: ')
