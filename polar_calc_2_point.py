@@ -157,6 +157,8 @@ final_coords_point2()
 print(f'Der Punkt {point2_name} hat die Koordinaten ({y_coord_point2} | {x_coord_point2}).')
 
 # Linie Standpunkt - Referenzpunkt, Standpunkt - Punkt 1, Standpunkt - Punkt 2
+plt.style.use('Solarize_Light2')
+
 plt.plot([pos_y, ref_y], [pos_x, ref_x], color='k', linestyle='-', zorder=-1)
 plt.plot([pos_y, y_coord_point1], [pos_x, x_coord_point1], color='r', linestyle='-', zorder=-1)
 plt.plot([pos_y, y_coord_point2], [pos_x, x_coord_point2], color='r', linestyle='-', zorder=-1)

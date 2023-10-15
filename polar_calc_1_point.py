@@ -96,6 +96,8 @@ final_coords()
 print(f'Der Punkt {point_name} hat die Koordinaten ({y_coord} | {x_coord}).')
 
 # Anzeige
+plt.style.use('Solarize_Light2')
+
 plt.plot([pos_y, ref_y], [pos_x, ref_x], color='k', linestyle='-', zorder=-1)
 plt.plot([pos_y, y_coord], [pos_x, x_coord], color='r', linestyle='-', zorder=-1)
 
