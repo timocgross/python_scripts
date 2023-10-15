@@ -214,36 +214,36 @@ final_coords_point3()
 print(f'Der Punkt {point3_name} hat die Koordinaten ({y_coord_point3} | {x_coord_point3}).')
 
 # Linie Standpunkt - Referenzpunkt, Standpunkt - Punkt 1, Standpunkt - Punkt 2, Standpunkt - Punkt3
-plt.plot([pos_y, ref_y], [pos_x, ref_x], color = 'k', linestyle = '-', zorder = -1)
+plt.plot([pos_y, ref_y], [pos_x, ref_x], color='k', linestyle='-', zorder=-1)
 plt.plot([pos_y, y_coord_point1], [pos_x, x_coord_point1],
-          color = 'r', linestyle = '-', zorder = -1)
+          color='r', linestyle='-', zorder=-1)
 plt.plot([pos_y, y_coord_point2], [pos_x, x_coord_point2],
-          color = 'r', linestyle = '-', zorder = -1)
+          color='r', linestyle='-', zorder=-1)
 plt.plot([pos_y, y_coord_point3], [pos_x, x_coord_point3],
-          color = 'r', linestyle = '-', zorder = -1)
+          color='r', linestyle='-', zorder=-1)
 
 # Standpunkt mit Beschriftung
-plt.scatter([pos_y], [pos_x], color = 'k', marker = '^')
-plt.text(pos_y - 3, pos_x, f'{pos_name}', fontsize = 12, ha = 'right', va = 'center')
+plt.scatter([pos_y], [pos_x], color='k', marker='^')
+plt.text(pos_y - 3, pos_x, f'{pos_name}', fontsize=12, ha='right', va='center')
 
 # Referenzpunkt mit Beschriftung
-plt.scatter([ref_y], [ref_x], color = 'k', marker = '^')
-plt.text(ref_y + 3, ref_x, f'{ref_name}', fontsize = 12, ha = 'left', va = 'center')
+plt.scatter([ref_y], [ref_x], color='k', marker='^')
+plt.text(ref_y + 3, ref_x, f'{ref_name}', fontsize=12, ha='left', va='center')
 
 # Punkt 1 mit Beschreibung
-plt.scatter([y_coord_point1], [x_coord_point1], color = 'r', marker = 'o')
+plt.scatter([y_coord_point1], [x_coord_point1], color='r', marker='o')
 plt.text(y_coord_point1 + 3, x_coord_point1,
-         f'{point1_name}', color = 'r', fontsize = 12, ha = 'left', va = 'center')
+         f'{point1_name}', color='r', fontsize=12, ha='left', va='center')
 
 # Punkt 2 mit Beschriftung
-plt.scatter([y_coord_point2], [x_coord_point2], color = 'r', marker = 'o')
+plt.scatter([y_coord_point2], [x_coord_point2], color='r', marker='o')
 plt.text(y_coord_point2 + 3, x_coord_point2,
-         f'{point2_name}', color = 'r', fontsize = 12, ha = 'left', va = 'center')
+         f'{point2_name}', color='r', fontsize=12, ha='left', va='center')
 
 # Punkt 3 mit Beschriftung
-plt.scatter([y_coord_point3], [x_coord_point3], color = 'r', marker = 'o')
+plt.scatter([y_coord_point3], [x_coord_point3], color='r', marker='o')
 plt.text(y_coord_point3 + 3, x_coord_point3,
-         f'{point3_name}', color = 'r', fontsize = 12, ha = 'left', va = 'center')
+         f'{point3_name}', color='r', fontsize=12, ha='left', va='center')
 
 plt.grid()
 plt.show()

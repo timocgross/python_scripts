@@ -96,17 +96,21 @@ final_coords()
 print(f'Der Punkt {point_name} hat die Koordinaten ({y_coord} | {x_coord}).')
 
 # Anzeige
-plt.plot([pos_y, ref_y], [pos_x, ref_x], color = 'k', linestyle = '-', zorder = -1)
-plt.plot([pos_y, y_coord], [pos_x, x_coord], color = 'r', linestyle = '-', zorder = -1)
+plt.plot([pos_y, ref_y], [pos_x, ref_x], color='k', linestyle='-', zorder=-1)
+plt.plot([pos_y, y_coord], [pos_x, x_coord], color='r', linestyle='-', zorder=-1)
 
-plt.scatter([pos_y], [pos_x], color = 'k', marker = '^')
-plt.text(pos_y - 3, pos_x, f'{pos_name}', fontsize = 12, ha = 'right', va = 'center')
+plt.scatter([pos_y], [pos_x], color='k', marker='^')
+plt.text(pos_y - 3, pos_x, f'{pos_name}', fontsize=12, ha='right', va='center')
 
-plt.scatter([ref_y], [ref_x], color = 'k', marker = '^')
-plt.text(ref_y + 3, ref_x, f'{ref_name}', fontsize = 12, ha = 'left', va = 'center')
+plt.scatter([ref_y], [ref_x], color='k', marker='^')
+plt.text(ref_y + 3, ref_x, f'{ref_name}', fontsize=12, ha='left', va='center')
 
-plt.scatter([y_coord], [x_coord], color = 'r', marker = 'o')
-plt.text(y_coord + 3, x_coord, f'{point_name}', color = 'r', fontsize = 12, ha = 'left', va = 'center')
+plt.scatter([y_coord], [x_coord], color='r', marker='o')
+plt.text(y_coord + 3, x_coord, f'{point_name}', color='r', fontsize=12, ha='left', va='center')
+
+plt.xlabel('Y-Koordinate')
+plt.ylabel('X-Koordinate')
+plt.title('Zeichnung')
 
 plt.grid()
 plt.show()
