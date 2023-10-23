@@ -1,37 +1,17 @@
-# Skalarprodukt (Winkel zweier Vektoren) #
+points = []
 
-print('Name des ersten Punktes:')
-nameP1 = input()
+for i in range(1, 3):
+    name = input(f'Name: ')
+    x_coord = float(input('X-Koordinate: '))
+    y_coord = float(input('Y-Koordinate: '))
+    z_coord = float(input('Z-Koordinate: '))
+    points.append((name, x_coord, y_coord, z_coord))
 
-print('Gib die Werte des ersten Punktes ein.')
-print('X-Wert:')
-X = float(input())
+(x1, y1, z1) = points[0][1:]
+(x2, y2, z2) = points[1][1:]
+solution = (x1*x2) + (y1*y2) + (z1*z2)
 
-print('Y-Wert:')
-Y = float(input())
-
-print('Z-Wert:')
-Z = float(input())
-
-print('Name des zweiten Punktes:')
-nameP2 = input()
-
-print('Gib die Werte des zweiten Punktes ein.')
-print('X-Wert:')
-x = float(input())
-
-print('Y-Wert:')
-y = float(input())
-
-print('Z-Wert:')
-z = float(input())
-
-def calculateScalar():
-    return (X*x) + (Y*y) + (Z*z)
-
-solution = calculateScalar()
-
-print('Das Skalarprodukt ' + str(nameP1) + str(nameP2) + ' ist ' + str(solution) + '.')
+print(f'Das Skalarprodukt {points[0][0]}-{points[1][0]} ist {solution}.')
 if solution < 0:
     print('Der Winkel φ ist ein stumpfer Winkel.')
 elif solution > 0:

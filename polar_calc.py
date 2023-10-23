@@ -46,8 +46,8 @@ pos_y = 16534.98
 pos_x = 12653.77
 
 # Aufgabe 4:
-ref_name = 100
-pos_name = 200
+ref_name = 200
+pos_name = 100
 point1_name = '11'
 point2_name = '12'
 point3_name = '13'
